@@ -75,7 +75,7 @@ var requestBody = {
     "payload": JSON.stringify(requestBody)
   };
 
- // เลือกเฉพาะข้อมูลที่คุณต้องการ
+ // 僅選擇您需要的資訊。
   var response = UrlFetchApp.fetch(apiUrl, options);
   var responseData = JSON.parse(response.getContentText());
   var textResult = responseData.candidates[0].content.parts[0].text;
@@ -101,7 +101,7 @@ function gemini_provision(event) {
       {
         "parts": [
           {
-            "text": "ช่วยบรรยายภาพนี้ให้หน่อย"
+            "text": "請幫忙描述一下這張圖。"
           },
           {
             "inlineData": {
